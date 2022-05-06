@@ -26,7 +26,7 @@ func BinarySearch(list []int, value int) int {
 		if guess < value {
 			low = mid + 1
 		} else {
-			high = mid + 1
+			high = mid - 1
 		}
 	}
 
@@ -42,6 +42,6 @@ func main() {
 	result := BinarySearch(searchList, searchValue)
 	wrong := BinarySearch(searchList, 100000)
 
-	fmt.Println("Result 1: ", result) // 6
+	fmt.Println("Result: ", result) // 6
 	fmt.Println("Wrong: ", wrong) // -1
 }
